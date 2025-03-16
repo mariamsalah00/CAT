@@ -1,0 +1,240 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* task1 */
+.grid {
+    background-color: #ddd;
+    padding: 20px;
+    margin: 20px auto;
+    width: 800px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 10px;
+   
+  }
+  .grid div {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    counter-increment: my-counter;
+  }
+  .grid div::before{
+    content: "Element";
+    color: white;
+    top: 50%;
+    left: 50%;
+  }
+  .grid div::after{
+    content: counter(my-counter);
+    color: white;
+  }
+  .grid div:nth-child(4),
+  .grid div:nth-child(5),
+  .grid div:nth-child(6) {
+    grid-row-end: span 4;
+  }
+  /* task2 */
+  .layout{
+      width: 100%;
+      height:100vh;
+      display: grid;
+      grid-template-columns: repeat(5,20%);
+      grid-template-rows: repeat(20,5vh);
+      background-color: red;
+  }
+  
+  header{
+    background-color:rgb(0, 140, 255) ;
+    grid-area: span 1 / span 5;
+    position: relative;
+  }
+  header::after{
+    content: "Header";
+    color: white;
+    position: absolute;
+    top:25%;
+    left:1%;
+  }
+  
+  section{
+    background-color: orangered;
+    grid-area: span 18 / span 4;
+    position: relative;
+  }
+  section::after{
+    content: "Section";
+    color: white;
+    position: absolute;
+    top:2%;
+    left:1%;
+  } 
+  aside{
+    background-color: rgb(66, 69, 66);
+    grid-area: span 18 / span 1;
+    position: relative;
+  }
+  aside::after{
+    content: "Aside";
+    color: white;
+    position: absolute;
+    top:2%;
+    left:5%;
+  } 
+  footer{
+    background-color: rgb(14, 128, 86);
+    grid-area: span 1 / span 5;
+    position: relative;
+  }
+  footer::after{
+    content: "Footer";
+    color: white;
+    position: absolute;
+    top:25%;
+    left:1%;
+  }
+  /* task3 */
+  .grid2 {
+    background-color: #ddd;
+    padding: 20px;
+    width: 800px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: auto 1fr 1fr auto;
+    grid-template-rows: 1fr auto;
+    gap: 10px;
+    margin: 20px auto;
+  }
+  .grid2 div{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* task4 */
+  .grid3 {
+    background-color: #ddd;
+    padding: 20px;
+    width: 800px;
+    height: 400px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    justify-content: space-between;
+    align-items: space-between;
+    gap: 10px;
+  }
+  .grid3 div{
+    background-color:rgb(225, 109, 165);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .grid3 div:nth-child(1){
+    grid-area: 6/ 1 /7 / 4;
+  }
+.grid3 div:nth-child(2){
+    grid-area: 2 / 1 / 3 / 3;
+  }
+.grid3 div:nth-child(3){
+    grid-area: 2 / 3 / 3 / 4;
+  }
+.grid3 div:nth-child(4){
+    grid-area: 3 / 1 / 4 / 2;
+  }
+.grid3 div:nth-child(5){
+    grid-area: 3 / 2 / 6 / 4;
+  }
+ 
+.grid3 div:nth-child(6){
+    grid-area: 4 / 1 / 5 / 2;
+  }
+ 
+.grid3 div:nth-child(7){
+    grid-area: 5 / 1 / 6 / 2;
+  }
+.grid3 div:nth-child(8){
+    grid-area: 1 / 1 / 2 / 4;
+  }
+  /* .task5 */
+  .grid4 {
+    background-color: #ddd;
+    padding: 20px;
+    width: 800px;
+    height: 400px;
+    margin: 20px auto;
+    display: grid;
+    justify-content:space-between;
+    align-content: space-between;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 0 10px;
+  }
+  .grid4 div{
+    background-color:rgb(225, 109, 165);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* task6 */
+   .grid5{
+    background-color: #ddd;
+    padding: 20px;
+    width:100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    justify-content: space-between;
+    align-content: space-between;
+    gap: 5px; 
+   }
+.grid5 div{
+  background-color: white;
+  border-bottom:2px solid tomato;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap:10px;
+}
+.grid5 p{
+  font-size: 10px;
+}
+.grid5 h3{
+  font-size: 15px;
+}
+.grid5 h6{
+  color: gray;
+}
+.grid5 div:nth-child(1){
+  grid-area: span 1 / span 2 ;
+}
+.grid5 div:nth-child(3){
+  grid-area: span 3  ;
+}
+.grid5 div:nth-child(4){
+  grid-area: span 2  ;
+}
+.grid5 div:nth-child(5){
+  grid-area: span 1 / span 2;
+}
+.grid5 div:nth-child(6){
+  grid-area: span 1 / span 2;
+}
+.grid5 div:nth-child(3),
+.grid5 div:nth-child(6),
+.grid5 div:nth-child(8){
+  background-color: black !important;
+  color: white;
+}
+
+
+  

@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.task1 {
+    width: 600px;
+    height: 10vh;
+    background-color: #eee;
+    margin: 40px auto;
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    position: relative;
+    border: 10px solid;
+    border-image: linear-gradient(to right, red 20% , blue 20%  40%, green 40% 60%, rgb(227, 44, 151) 60% 80%, purple 80% 100%) 1 ;
+}
+.task1 p::first-letter{
+    color: red;
+  }
+.task2 div{
+    width: 600px;
+    height: 5vh;
+    background-color: #eee;
+    margin:20px auto;
+    padding: 10px;
+    position: relative;
+
+} 
+.task2 div::after{
+    content: "";
+    width:inherit;
+    height: 3px;
+    background-image:linear-gradient(to right, red 50%,
+    green 50% 100%);
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+.div1{
+    caret-color: red;
+    outline: none;
+}
+
+.div2 p{
+   filter:contrast(.5);
+}
